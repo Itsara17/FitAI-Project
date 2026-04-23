@@ -1,26 +1,19 @@
-# 🏋️‍♂️ FitAI - Premium Fitness Chatbot Platform
+# 🤖 FitAI - Premium AI Fitness Coach
+โปรเจคแอปพลิเคชันเทรนเนอร์ส่วนตัวที่ขับเคลื่อนด้วย AI (Google Gemini) ออกแบบมาเพื่อสร้างตารางออกกำลังกายและโภชนาการที่ปรับแต่งตามบุคคล ภายใต้ดีไซน์แบบ Premium Minimalist (Onyx & Teal)
 
-FitAI เป็นแอปพลิเคชันแชทบอทอัจฉริยะที่ออกแบบมาเพื่อเป็นผู้ช่วยส่วนตัวด้านสุขภาพและการออกกำลังกาย โปรเจคนี้ถูกพัฒนาขึ้นโดยเน้นสถาปัตยกรรมระบบที่สามารถต่อยอดและขยายขนาดได้ในอนาคต (Scalable Architecture) โดยไม่ได้เป็นเพียงแค่แชทบอทโต้ตอบทั่วไป แต่ยังมีระบบ Data Ingestion สำหรับเก็บรวบรวมข้อมูลผู้ใช้งานเพื่อต่อยอดสู่การวิเคราะห์ทาง Data Science
-
-## ✨ ฟีเจอร์หลัก (Key Features)
-- **AI-Powered Personal Trainer:** ขับเคลื่อนด้วย Google Gemini AI ที่ถูกปรับแต่ง (Prompt Engineering) ให้เชี่ยวชาญด้านโภชนาการและการจัดตารางเวทเทรนนิ่ง
-- **Context-Aware Conversation:** ระบบจดจำบริบทการสนทนา ช่วยให้ผู้ใช้สามารถพูดคุยต่อเนื่องได้อย่างเป็นธรรมชาติ
-- **Graceful Error Handling:** มีระบบ Auto-Retry และการจัดการข้อผิดพลาด (Error 503) เพื่อให้แอปพลิเคชันทำงานได้ไหลลื่นแม้ในช่วงที่ API ทำงานหนัก
-- **Data Ingestion Pipeline:** บันทึกประวัติการแชทและข้อมูลผู้ใช้ (Demographics) ลงในฐานข้อมูล SQLite โดยอัตโนมัติ เพื่อเตรียมพร้อมสำหรับการทำ Dataset
-- **Modern UI/UX:** หน้าต่างแชทรูปแบบ Dark Mode สวยงาม พร้อมรองรับการแสดงผลข้อความแบบ Markdown (React-Markdown)
+## ✨ จุดเด่นของระบบ (Features)
+- 🧠 **AI-Powered:** ใช้ Google Gemini ในการวิเคราะห์ข้อมูลและโต้ตอบแบบ Real-time
+- 🛡️ **Safety First:** Prompt Engineering บังคับให้ AI แนะนำจุดโฟกัสและวิธีป้องกันการบาดเจ็บเสมอ
+- 💾 **Context Memory:** ระบบบันทึกประวัติการแชทเพื่อให้ AI สนทนาได้อย่างต่อเนื่อง
+- 🎨 **Premium UI:** ออกแบบหน้าจอแชทด้วย React และ Tailwind CSS
 
 ## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
-* **Frontend:** React.js, Vite, CSS (ออกแบบสไตล์ Dark Theme)
-* **Backend:** Python, FastAPI (ออกแบบระบบ API ให้พร้อมสำหรับการขยายสเกล)
-* **Database:** SQLite (พร้อมสำหรับการอัปเกรดเป็น MongoDB/PostgreSQL ในอนาคต)
-* **AI Integration:** Google Gemini API (gemini-2.5-flash)
+- **Frontend:** React.js, Vite
+- **Backend:** Python, FastAPI
+- **Database:** SQLite (พร้อมระบบเข้ารหัส JWT & Bcrypt)
+- **AI Integration:** Google Generative AI (Gemini 2.5 Flash)
 
-## 🚀 วิธีการติดตั้งและทดลองใช้งาน (Local Setup)
-
-### 1. การรันฝั่ง Backend (API & Database)
-```bash
-cd backend
-python -m venv venv
-.\venv\Scripts\activate   # สำหรับ Windows
-pip install fastapi uvicorn requests
-uvicorn main:app --reload
+## 🚀 วิธีรันโปรเจคในเครื่อง (How to Run)
+1. **Frontend:** เข้าโฟลเดอร์ `frontend` และรัน `npm run dev`
+2. **Backend:** เข้าโฟลเดอร์ `backend` เปิด Virtual Environment และรัน `uvicorn main:app --reload`
+3. **API Key:** ต้องใส่ Gemini API Key ในไฟล์ `main.py` ก่อนใช้งาน

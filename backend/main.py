@@ -11,7 +11,7 @@ import sqlite3
 import bcrypt
 import jwt
 from datetime import timedelta
-genai.configure(api_key="AIzaSyAp3ElrMaxrd0ivUJ6Z2LLaKJ3MSs9DiNA") # คีย์ใหม่ที่คุณเพิ่งเปลี่ยน
+genai.configure(api_key="api key") # คีย์ใหม่ที่คุณเพิ่งเปลี่ยน
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 # โมเดลสำหรับรับข้อมูลตอนสมัครสมาชิก
